@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
 
+// Hasta aquí funciona
 
 // si colocamos not null en todos los campos en workbench e intentamos crear un nuevo registro, da error 500 internal server error
 
