@@ -11,6 +11,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import jakarta.persistence.UniqueConstraint;
 
 @Entity // relaciona esta clase con una tabla de la base de datos
@@ -36,6 +37,11 @@ public class User {
     )
     // list de java util
     private List<Role> roles;
+
+    // una bandera que manejamos en la base de datos
+    // no es un campo o atributo de la tabla de la BD
+    @Transient // ojo de jakarta
+    private boolean admin;
 
     public Long getId() {
         return id;
@@ -69,6 +75,13 @@ public class User {
         this.roles = roles;
     }
 
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
+    }
     
 }
 
