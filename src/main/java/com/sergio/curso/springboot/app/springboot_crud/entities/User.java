@@ -43,6 +43,8 @@ public class User {
     // list de java util
     private List<Role> roles;
 
+    private boolean enabled; // si el usuario esta habilitado
+
     // una bandera que manejamos en la base de datos
     // no es un campo o atributo de la tabla de la BD
     @Transient // ojo de jakarta
@@ -87,6 +89,15 @@ public class User {
     public void setAdmin(boolean admin) {
         this.admin = admin;
     }
+
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+    
     
 }
 

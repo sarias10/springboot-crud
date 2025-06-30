@@ -32,7 +32,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * Ideal para servicios backend donde los endpoints solo devuelven datos a un frontend o cliente.
  */
 @RestController
-@RequestMapping("users") // le agregamos una ruta base
+@RequestMapping("/api/users") // le agregamos una ruta base
 public class UserController {
 
     @Autowired

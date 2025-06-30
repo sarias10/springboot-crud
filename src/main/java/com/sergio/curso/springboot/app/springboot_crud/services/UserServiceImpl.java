@@ -6,6 +6,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sergio.curso.springboot.app.springboot_crud.entities.Role;
@@ -14,6 +15,7 @@ import com.sergio.curso.springboot.app.springboot_crud.repositories.RoleReposito
 import com.sergio.curso.springboot.app.springboot_crud.repositories.UserRepository;
 
 // esta clase utiliza las operaciones del userRepository
+@Service
 public class UserServiceImpl implements UserService{
 
     @Autowired
