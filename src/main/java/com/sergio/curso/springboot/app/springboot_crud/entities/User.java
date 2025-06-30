@@ -13,6 +13,8 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 import jakarta.persistence.UniqueConstraint;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity // relaciona esta clase con una tabla de la base de datos
 @Table(name="users")
@@ -23,8 +25,11 @@ public class User {
     private Long id;
 
     @Column(unique = true) // username es unico
+    @NotBlank
+    @Size(min = 4, max = 12)
     private String username;
 
+    @NotBlank
     private String password;
 
     // relación unidireccional, cuando obtenemos los usuarios, quiero sus roles. No viceversa
